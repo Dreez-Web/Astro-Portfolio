@@ -1,0 +1,50 @@
+---
+import menus from "../collections/menu.json";
+import Logo from "../components/logo.astro";
+---
+<div>
+    <Logo />
+<div class="menu">
+{
+  menus.map((menu) => {
+    return (
+      <a href={menu.url} class="menu">{menu.name}</a>
+    )
+  })
+}
+</div>
+</div>
+
+<style>
+    div {
+        font-family: "Lato", serif;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        font-size: 1.25rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+    }
+    
+    a:hover {
+        color: #0070f3;
+    }
+</style>
