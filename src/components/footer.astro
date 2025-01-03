@@ -1,0 +1,32 @@
+--- 
+import Logo from './logo.astro'
+---
+
+<section>
+    <div>
+        <Logo />
+        <p>© {new Date().getFullYear()} Andrès</p>
+    </div>
+    <span>
+        <p>Desarrollado con Astro</p>
+</section>
+
+<style>
+    section{
+        color: rgb(116, 116, 116);
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
