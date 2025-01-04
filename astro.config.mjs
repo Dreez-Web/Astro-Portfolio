@@ -6,5 +6,5 @@ import vercel from "@astrojs/vercel";
 // https://astro.build/config
 export default defineConfig({
   site: "https://Dreez-Web.github.io",
-  adapter: vercel(),
+  adapter: vercel({ imageService: true }),
 });
