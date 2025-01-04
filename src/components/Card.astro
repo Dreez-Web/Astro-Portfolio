@@ -1,0 +1,66 @@
+---
+const { src, alt, title, description} = Astro.props;
+---
+
+
+<div class="card">
+    <div class="card-content">
+      <p class="card-info">{description}</p>
+      <h3 class="card-title">{title}</h3>
+    </div>
+    <div class="card-image">
+      <img src={src} alt={alt}/>
+    </div>
+</div>
+  
+
+<style>
+
+  /* Estilos generales de la card */
+  .card {
+    width: 300px; /* Ancho de la card */
+    margin: 10px;
+    background-color: #181818; /* Fondo oscuro */
+    color: #fff; /* Texto blanco */
+    border-radius: 12px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta contenido que se sale */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Sombra */
+    font-family: "Lato", sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover para añadir profundidad */
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Contenido textual */
+  .card-content {
+    padding: 1rem;
+  }
+  
+  
+  /* Información adicional */
+  .card-info {
+    font-size: 0.875rem; /* Tamaño mediano */
+    color: #ccc; /* Gris claro */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Título */
+  .card-title {
+    font-size: 1.25rem; /* Tamaño más grande */
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  /* Imagen de la card */
+  .card-image img {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantiene proporción */
+    display: block;
+    border-radius: 0 0 12px 12px; /* Solo redondea las esquinas inferiores */
+  }
+  
+</style>

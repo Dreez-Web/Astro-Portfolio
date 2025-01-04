@@ -2,12 +2,30 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/footer.astro';
+import Separador from '../components/Separador.astro';
+import Cards from '../components/Card.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Bienvenidos">
 	<Welcome />
+	<Separador  text="Revisa mis proyectos"/>
+	<div class="card-container">
+	<Cards src="../src/assets/woman.jpg" alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+	<Cards src="../src/assets/woman.jpg" alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+	<Cards src="../src/assets/woman.jpg" alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+	</div>
+	<Separador  text="Encuentrame aqui"/>
+	<Cards src="../src/assets/woman.jpg" alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+	
 	<Footer />
 </Layout>
+
+<style>
+	.card-container {
+	  display: flex; /* Usa flexbox */
+	  gap: 1rem; /* Espaciado entre tarjetas */
+	  justify-content: center; /* Centra horizontalmente */
+	  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas si no caben */
+	}
+  </style>

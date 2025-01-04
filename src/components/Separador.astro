@@ -1,0 +1,56 @@
+---
+const { text } = Astro.props;
+
+---
+<div class="separator">
+    <span class="line"></span>
+    <p class="button">{text}
+      <span class="icon">↓</span>
+    </p>
+    </button>
+    <span class="line"></span>
+  </div>
+  
+  <style>
+    /* Contenedor del separador */
+    .separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 1rem; /* Espaciado entre elementos */
+      margin: 2rem 0;
+    }
+  
+    /* Líneas punteadas */
+    .line {
+      flex: 1; /* Las líneas ocupan todo el espacio disponible */
+      border-top: 1px dashed #555; /* Línea punteada */
+    }
+  
+    /* Botón central */
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem; /* Espaciado entre texto e ícono */
+      padding: 0.5rem 1rem;
+      background-color: #212121; /* Fondo oscuro */
+      color: #fff; /* Texto blanco */
+      font-size: 0.7rem; /* Tamaño del texto */
+      font-weight: 100; /* Peso del texto */
+      border: 1px solid #555; /* Borde del botón */
+      border-radius: 9999px; /* Botón completamente redondeado */
+      text-transform: uppercase; /* Texto en mayúsculas */
+      transition: all 0.3s ease; /* Transición para hover */
+    }
+  
+    /* Ícono en el botón */
+    .icon {
+      font-size: 1rem; /* Tamaño del ícono */
+      font-weight: 700; /* Peso del ícono */
+    }
+  
+   
+  </style>
+  
