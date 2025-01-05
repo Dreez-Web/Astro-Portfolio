@@ -7,11 +7,11 @@ import Boton from '../components/boton.astro';
 	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
-			<h1>Diseño <span>Web</span></h1>
+			<h1>Diseño <span class="dynamic-gradient">Web</span></h1>
 			<p>Tecnologias para un diseño eficiente y rapido</p>
 			<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
 		</section>
-		<img src="/assets/astronauta.png" alt="">
+		<img src="src/assets/astronauta.png" alt="Astronauta" class="astronauta">
 	</main>
 </div>
 
@@ -27,7 +27,6 @@ import Boton from '../components/boton.astro';
 	}
 
 	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
 		height: 100%;
 	}
 
@@ -35,6 +34,7 @@ import Boton from '../components/boton.astro';
 		height: 100%;
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	#hero {
@@ -69,71 +69,38 @@ import Boton from '../components/boton.astro';
 		margin: 0;
 	}
 
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
+	.astronauta {
+		width: 600px; /* Ajusta según el tamaño deseado */
+		animation: float 5s ease-in-out infinite;
 	}
 
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
+	@keyframes float {
+		0% {
+			transform: translateY(0);
+	}
+		50% {
+			transform: translateY(-20px);
+	}
+		100% {
+			transform: translateY(0);
+	}
 	}
 
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
+	.dynamic-gradient {
+		background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+		background-size: 300%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: gradient-move 3s linear infinite;
 	}
 
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
+	@keyframes gradient-move {
+		0% {
+			background-position: 0% 50%;
+		}
+		100% {
+			background-position: 100% 50%;
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
 </style>
