@@ -1,6 +1,6 @@
 ---
 import Nav from '../components/Nav.astro';
-const { title } = Astro.props;
+const { title, id } = Astro.props;
 import '@fontsource-variable/onest';
 ---
 
@@ -8,7 +8,7 @@ import '@fontsource-variable/onest';
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,4 +31,11 @@ import '@fontsource-variable/onest';
 		height: 100%;
 		scroll-behavior: smooth;
 	}
+
+	header{
+		position: sticky;
+		top: 0;
+		z-index: 100;
+	}
+	
 </style>
