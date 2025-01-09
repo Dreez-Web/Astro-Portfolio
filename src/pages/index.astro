@@ -5,18 +5,51 @@ import Footer from '../components/footer.astro';
 import Separador from '../components/Separador.astro';
 import Cards from '../components/Card.astro';
 import woman from '../assets/woman.jpg';
+import section from '../components/SectionContainer.astro'
 
 ---
 
 <Layout title="Bienvenidos">
-	<Welcome />
-	<Separador  text="Revisa mis proyectos"/>
-	<div class="card-container">
-	<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-	<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-	<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-	</div>
-	<Separador  text="Encuentrame aqui"/>
+	<section id="">
+		<Welcome />
+	</section>
+	
+	<section id="servicios">
+		<Separador  text="Revisa mis proyectos"/>
+		<div class="card-container">
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+		</div>
+	</section>
+	
+	<section id="proyectos">
+		<Separador  text="Encuentrame aqui"/>
+		<div class="card-container">
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			</div>	
+	</section>
+
+	<section id="sobre-mi">
+		<Separador  text="Encuentrame aqui"/>
+		<div class="card-container">
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			</div>	
+	</section>
+
 	<Footer />
 </Layout>
 
