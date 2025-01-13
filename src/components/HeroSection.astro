@@ -3,19 +3,20 @@ import background from '../assets/background.svg';
 import astronauta from '../assets/astronauta.png';
 import Boton from '../components/boton.astro';
 ---
-
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<h1>Diseño <span class="dynamic-gradient">Web</span></h1>
-			<p>Tecnologias para un diseño eficiente y rapido</p>
-			<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
-		</section>
-		<img src={astronauta.src} alt="Astronauta" class="astronauta">
-	</main>
-</div>
-
+<section>
+	<div id="container">
+		<img id="background" src={background.src} alt="" fetchpriority="high" />
+		<main>
+			<section id="hero">
+				<h1>Diseño <span class="dynamic-gradient">Web</span></h1>
+				<p>Diseñamos y creamos tu web.</p>
+				<p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
+				<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
+			</section>
+			<img src={astronauta.src} alt="Astronauta" class="astronauta">
+		</main>
+	</div>
+</section>
 <style>
 	#background {
 		position: fixed;
@@ -43,12 +44,12 @@ import Boton from '../components/boton.astro';
 		align-items: start;
 		flex-direction: column;
 		justify-content: center;
-		padding: 16px;
+		padding: 86px;
 	}
 
 	h1 {
-		font-size: 3rem;
-		margin-top: 0.25em;
+		font-size: 4rem;
+		margin: 0.25em 0 0.2em;
 	}
 
 	
@@ -61,13 +62,14 @@ import Boton from '../components/boton.astro';
 	}
 	span {
 		color: #f03cae;
+		font-weight: bold;
 	}
 	p {
 		color: #4b5563;
 		font-size: 20px;
-		line-height: 24px;
+		line-height: 1.5; /* Mejora la legibilidad */
 		letter-spacing: -0.006em;
-		margin: 0;
+		margin: 0.25em 0; /* Reduce margen superior e inferior */
 	}
 
 	.astronauta {

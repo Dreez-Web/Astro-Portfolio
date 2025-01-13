@@ -5,31 +5,33 @@ import '@fontsource-variable/onest';
 ---
 
 
-<div class="card">
-    <div class="card-content">
-      <p class="card-info">{description}</p>
-      <h3 class="card-title">{title}</h3>
-    </div>
-    <div class="card-image">
-      <img src={src} alt={alt}/>
-    </div>
-</div>
-  
+  <div class="card">
+     
+        <div class="label">{title}</div>
+        <img class="backgroud-image" src={src} alt={alt}/>
+    
+  </div>
+
 
 <style>
+
 
   /* Estilos generales de la card */
   .card {
     font-family: 'Onest Variable', sans-serif;
-
-    width: 300px; /* Ancho de la card */
-    margin: 10px;
-    background-color: #181818; /* Fondo oscuro */
-    color: #fff; /* Texto blanco */
-    border-radius: 12px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta contenido que se sale */
+    position: relative;
+    width: 500px; /* Ajusta según el tamaño deseado */
+    height: 300px; /* Ajusta según el tamaño deseado */
+    border-radius: 16px; /* Esquinas redondeadas */
+    overflow: hidden; /* Para evitar que los elementos internos sobresalgan */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Sombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+    .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor */
   }
   
   /* Hover para añadir profundidad */
@@ -52,18 +54,20 @@ import '@fontsource-variable/onest';
   }
   
   /* Título */
-  .card-title {
-    font-size: 1.25rem; /* Tamaño más grande */
-    font-weight: 600;
-    margin: 0;
-  }
+  .label {
+    position: absolute;
+    top: 10px; /* Margen superior */
+    left: 10px; /* Margen izquierdo */
+    background-color: white; /* Fondo blanco */
+    padding: 5px 12px; /* Espaciado interno */
+    border-radius: 12px; /* Esquinas redondeadas */
+    font-family: Arial, sans-serif; /* Fuente base */
+    font-size: 14px; /* Tamaño de texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
   
-  /* Imagen de la card */
-  .card-image img {
-    width: 100%; /* Ancho completo */
-    height: auto; /* Mantiene proporción */
-    display: block;
-    border-radius: 0 0 12px 12px; /* Solo redondea las esquinas inferiores */
-  }
+  
   
 </style>

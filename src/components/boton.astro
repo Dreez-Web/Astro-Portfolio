@@ -2,16 +2,14 @@
 const { link, text } = Astro.props;
 ---
 
-<a
-  href={link}
-  class="button"
->
+<a href={link} target="_blank" class="button">
   {text}
 </a>
 
 <style>
     .button {
   display: inline-flex;
+  
   width: auto;
   padding: 0.5rem 1rem;
   margin-top: 1.25rem;

@@ -1,27 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Hero from '../components/HeroSection.astro';
 import Layout from '../layouts/LayoutMain.astro';
-import Footer from '../components/footer.astro';
 import Separador from '../components/Separador.astro';
 import Cards from '../components/Card.astro';
 import woman from '../assets/woman.jpg';
-import section from '../components/SectionContainer.astro'
 ---
 
-<Layout title="Bienvenidos">
-	<section >
-		<Welcome />
-	</section>
+<Layout title="Desarrollo y Programacion Web">
+	<Hero/>
+	
 	
 	<section id="servicios">
 		<Separador  text="Nuestros Servicios"/>
 		<div class="card-container">
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-		<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
+			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
 		</div>
 	</section>
 	
@@ -31,10 +25,7 @@ import section from '../components/SectionContainer.astro'
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			</div>	
+		</div>	
 	</section>
 
 	<section id="sobre-mi">
@@ -43,20 +34,16 @@ import section from '../components/SectionContainer.astro'
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
 			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			<Cards src={woman.src} alt="Lisener" title="Musica" description="Musica para volar sin necesidad de salir de tu habitacion"/>
-			</div>	
+		</div>	
 	</section>
 
-	<Footer />
 </Layout>
 
 <style>
 	.card-container {
-	  display: flex; /* Usa flexbox */
-	  gap: 1rem; /* Espaciado entre tarjetas */
-	  justify-content: center; /* Centra horizontalmente */
-	  flex-wrap: wrap; /* Permite que las tarjetas se ajusten en múltiples filas si no caben */
+	    display: flex; 
+  		flex-wrap: wrap; 
+  		justify-content: center; 
+ 		gap: 20px; 
 	}
-  </style>
+</style>

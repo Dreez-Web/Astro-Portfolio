@@ -15,3 +15,6 @@ Inside of your Astro project, you'll see the following folders and files:
 │       └── index.astro
 └── package.json
 ```
+
+> [ !Note]
+> Encuentra aqui la documentacion de la pagina.
