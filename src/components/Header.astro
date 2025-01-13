@@ -4,23 +4,22 @@ import Logo from "../components/Logo.astro";
 ---
 <header>
   <div>
-      <Logo />
-    <div class="menu">
-    {
-      menus.map((menu) => {
-        return (
-          <a href={menu.url} class="menu">{menu.name}</a>
-        )
-      })
-    }
-    </div>
+    <Logo />
+    <nav>
+      <ul class="menu">
+        {menus.map((menu) => (
+          <li><a href={menu.url} class="menu-link">{menu.name}</a></li>
+        ))}
+      </ul>
+    </nav>
   </div>
 </header>
 <style>
+  
   header{
 		position: sticky;
 		top: 0;
-		z-index: 100;
+		z-index: 1000;
 	}
     div {
 		    font-family: 'Onest Variable', sans-serif;
@@ -31,7 +30,9 @@ import Logo from "../components/Logo.astro";
         background-color: #f8f9fa;
         padding: 0.2rem 1rem;
         gap: 1rem;
+        
     }
+    
     
     ul {
         display: flex;
@@ -42,7 +43,7 @@ import Logo from "../components/Logo.astro";
     }
 
     li {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     a {

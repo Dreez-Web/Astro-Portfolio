@@ -11,7 +11,10 @@ import Boton from '../components/boton.astro';
 				<h1>Diseño <span class="dynamic-gradient">Web</span></h1>
 				<p>Diseñamos y creamos tu web.</p>
 				<p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
-				<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
+				<div class="boton">
+					<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
+					<Boton text="Contactanos" link="https://github.com/Dreez-Web" />
+				</div>
 			</section>
 			<img src={astronauta.src} alt="Astronauta" class="astronauta">
 		</main>
@@ -46,7 +49,10 @@ import Boton from '../components/boton.astro';
 		justify-content: center;
 		padding: 86px;
 	}
-
+	.boton{
+		display: flex;
+		justify-content: center;
+	}
 	h1 {
 		font-size: 4rem;
 		margin: 0.25em 0 0.2em;
