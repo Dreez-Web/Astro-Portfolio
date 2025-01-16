@@ -1,115 +1,115 @@
 ---
-import background from '../assets/background.svg';
-import astronauta from '../assets/astronauta.png';
-import Boton from '../components/boton.astro';
+import background from "../assets/background.svg";
+import astronauta from "../assets/astronauta.png";
+import Boton from "../components/boton.astro";
+import Tecnologias from "../components/Tecnologias.astro";
 ---
+
 <section>
-	<div id="container">
-		<img id="background" src={background.src} alt="" fetchpriority="high" />
-		<main>
-			<section id="hero">
-				<h1>Diseño <span class="dynamic-gradient">Web</span></h1>
-				<p>Diseñamos y creamos tu web.</p>
-				<p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
-				<div class="boton">
-					<Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
-					<Boton text="Contactanos" link="https://github.com/Dreez-Web" />
-				</div>
-			</section>
-			<img src={astronauta.src} alt="Astronauta" class="astronauta">
-		</main>
-	</div>
+  <div id="container">
+    <img id="background" src={background.src} alt="" fetchpriority="high" />
+    <main>
+      <section id="hero">
+        <h1>Diseño <span class="dynamic-gradient">Web</span></h1>
+        <p>Diseñamos y creamos tu web.</p>
+        <p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
+        <div class="boton">
+          <Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
+          <Boton text="Contactanos" link="https://github.com/Dreez-Web" />
+        </div>
+      </section>
+      <img src={astronauta.src} alt="Astronauta" class="astronauta" />
+    </main>
+  </div>
+  <Tecnologias />
 </section>
 <style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
+  #background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(100px);
+  }
 
-	#container {
-		height: 100%;
-	}
+  #container {
+    height: 100%;
+  }
 
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 86px;
-	}
-	.boton{
-		display: flex;
-		justify-content: center;
-	}
-	h1 {
-		font-size: 4rem;
-		margin: 0.25em 0 0.2em;
-	}
+  #hero {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 86px;
+  }
+  .boton {
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 4rem;
+    margin: 0.25em 0 0.2em;
+  }
 
-	
+  h2 {
+    margin: 0 0 1em;
+    font-weight: normal;
+    color: #111827;
+    font-size: 20px;
+  }
+  span {
+    color: #f03cae;
+    font-weight: bold;
+  }
+  p {
+    color: #4b5563;
+    font-size: 20px;
+    line-height: 1.5; /* Mejora la legibilidad */
+    letter-spacing: -0.006em;
+    margin: 0.25em 0; /* Reduce margen superior e inferior */
+  }
 
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-	span {
-		color: #f03cae;
-		font-weight: bold;
-	}
-	p {
-		color: #4b5563;
-		font-size: 20px;
-		line-height: 1.5; /* Mejora la legibilidad */
-		letter-spacing: -0.006em;
-		margin: 0.25em 0; /* Reduce margen superior e inferior */
-	}
+  .astronauta {
+    width: 600px; /* Ajusta según el tamaño deseado */
+    animation: float 5s ease-in-out infinite;
+  }
 
-	.astronauta {
-		width: 600px; /* Ajusta según el tamaño deseado */
-		animation: float 5s ease-in-out infinite;
-	}
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
-	@keyframes float {
-		0% {
-			transform: translateY(0);
-	}
-		50% {
-			transform: translateY(-20px);
-	}
-		100% {
-			transform: translateY(0);
-	}
-	}
+  .dynamic-gradient {
+    background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 3s linear infinite;
+  }
 
-	.dynamic-gradient {
-		background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
-		background-size: 300%;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		animation: gradient-move 3s linear infinite;
-	}
-
-	@keyframes gradient-move {
-		0% {
-			background-position: 0% 50%;
-		}
-		100% {
-			background-position: 100% 50%;
-		}
-	}
-
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 </style>

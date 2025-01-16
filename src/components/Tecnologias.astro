@@ -1,0 +1,39 @@
+---
+import Html from "../components/Icons/Html.astro";
+import JsIcon from "../components/Icons/JsIcon.astro";
+import CssIcon from "../components/Icons/CssIcon.astro";
+import AstroIcon from "../components/Icons/AstroIcon.astro";
+import TailIcon from "../components/Icons/TailIcon.astro";
+import WordIcon from "../components/Icons/WordIcon.astro";
+import GoogleIcon from "../components/Icons/GoogleIcon.astro";
+---
+
+<section class="tecnologias">
+  <ul>
+    <li><Html /></li>
+    <li><JsIcon /></li>
+    <li><CssIcon /></li>
+    <li><AstroIcon /></li>
+    <li><TailIcon /></li>
+    <li><WordIcon /></li>
+    <li><GoogleIcon /></li>
+  </ul>
+</section>
+
+<style>
+  .tecnologias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  li {
+    margin: 0 10px;
+  }
+</style>
