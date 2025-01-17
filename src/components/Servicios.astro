@@ -2,7 +2,7 @@
 import background from "../assets/background.svg";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
-import Card from "../components/Card.astro";
+import Astropizza from "../assets/astronautapizza.png";
 ---
 
 <section>
@@ -13,20 +13,16 @@ import Card from "../components/Card.astro";
         <h1>Lo que hacemos por <span class="dynamic-gradient">ti</span></h1>
         <p>
           Enfocados en ofrecer soluciones innovadoras, nuestros servicios están
-          diseñados para ayudarte a alcanzar tus objetivos. Desde estrategias
-          personalizadas hasta herramientas de última generación, trabajamos
-          contigo para impulsar el crecimiento de tu proyecto y hacer realidad
-          tus ideas.
+          diseñados para ayudarte a alcanzar tus <span>objetivos</span>. Desde
+          estrategias personalizadas hasta herramientas de última generación,
+          trabajamos contigo para impulsar el crecimiento de tu proyecto y hacer
+          realidad tus ideas.
         </p>
         <div class="boton">
           <Boton text="Contactanos" link="https://github.com/Dreez-Web" />
         </div>
       </section>
-      <Card
-        title="Desarrollo"
-        src="../src/assets/astronauta.png"
-        alt="Astronauta"
-      />
+      <img src={Astropizza.src} alt="Astropizza" />
     </main>
   </div>
 </section>
@@ -41,6 +37,9 @@ import Card from "../components/Card.astro";
     filter: blur(100px);
   }
 
+  img {
+    width: 400px;
+  }
   #container {
     height: 100%;
   }
@@ -67,6 +66,7 @@ import Card from "../components/Card.astro";
   }
   h1 {
     font-size: 4rem;
+    font-weight: bold;
     margin: 0.25em 0 0.2em;
   }
 

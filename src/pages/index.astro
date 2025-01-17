@@ -6,43 +6,12 @@ import Cards from "../components/Card.astro";
 import woman from "../assets/woman.jpg";
 import Servicios from "../components/Servicios.astro";
 import Proyectos from "../components/Proyectos.astro";
+import Contacto from "../components/Contacto.astro";
 ---
 
 <Layout title="Desarrollo y Programacion Web">
   <Hero />
   <Servicios />
   <Proyectos />
-
-  <section id="sobre-mi">
-    <Separador text="Sobre Mi" />
-    <div class="card-container">
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-    </div>
-  </section>
+  <Contacto />
 </Layout>
-
-<style>
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-</style>

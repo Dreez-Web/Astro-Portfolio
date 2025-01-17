@@ -2,56 +2,60 @@
 import menus from "../collections/menu.json";
 import Logo from "../components/Logo.astro";
 ---
+
 <header>
   <div>
     <Logo />
     <nav>
       <ul class="menu">
-        {menus.map((menu) => (
-          <li><a href={menu.url} class="menu-link">{menu.name}</a></li>
-        ))}
+        {
+          menus.map((menu) => (
+            <li>
+              <a href={menu.url} class="menu-link">
+                {menu.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </div>
 </header>
 <style>
-  
-  header{
-		position: sticky;
-		top: 0;
-		z-index: 1000;
-	}
-    div {
-		    font-family: 'Onest Variable', sans-serif;
-        font-weight: 600;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #f8f9fa;
-        padding: 0.2rem 1rem;
-        gap: 1rem;
-        
-    }
-    
-    
-    ul {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        list-style: none;
-        padding: 0;
-    }
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  div {
+    font-family: "Onest Variable", sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 0.2rem 1rem;
+    gap: 1rem;
+  }
 
-    li {
-        font-size: 1rem;
-    }
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
 
-    a {
-        text-decoration: none;
-        color: #333;
-    }
-    
-    a:hover {
-        color: #0070f3;
-    }
+  li {
+    font-size: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  a:hover {
+    color: #0070f3;
+  }
 </style>
