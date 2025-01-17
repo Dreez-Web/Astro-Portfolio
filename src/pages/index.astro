@@ -4,58 +4,14 @@ import Layout from "../layouts/LayoutMain.astro";
 import Separador from "../components/Separador.astro";
 import Cards from "../components/Card.astro";
 import woman from "../assets/woman.jpg";
+import Servicios from "../components/Servicios.astro";
+import Proyectos from "../components/Proyectos.astro";
 ---
 
 <Layout title="Desarrollo y Programacion Web">
   <Hero />
-
-  <section id="servicios">
-    <Separador text="Nuestros Servicios" />
-    <div class="card-container">
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-    </div>
-  </section>
-
-  <section id="proyectos">
-    <Separador text="Nuestros Proyectos" />
-    <div class="card-container">
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-      <Cards
-        src={woman.src}
-        alt="Lisener"
-        title="Musica"
-        description="Musica para volar sin necesidad de salir de tu habitacion"
-      />
-    </div>
-  </section>
+  <Servicios />
+  <Proyectos />
 
   <section id="sobre-mi">
     <Separador text="Sobre Mi" />

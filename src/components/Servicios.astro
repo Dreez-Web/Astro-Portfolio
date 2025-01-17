@@ -1,8 +1,8 @@
 ---
 import background from "../assets/background.svg";
-import astronauta from "../assets/astronauta.png";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
+import Card from "../components/Card.astro";
 ---
 
 <section>
@@ -10,18 +10,25 @@ import Tecnologias from "../components/Tecnologias.astro";
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
       <section id="hero">
-        <h1>Diseño <span class="dynamic-gradient">Web</span></h1>
-        <p>Diseñamos y creamos tu web.</p>
-        <p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
+        <h1>Lo que hacemos por <span class="dynamic-gradient">ti</span></h1>
+        <p>
+          Enfocados en ofrecer soluciones innovadoras, nuestros servicios están
+          diseñados para ayudarte a alcanzar tus objetivos. Desde estrategias
+          personalizadas hasta herramientas de última generación, trabajamos
+          contigo para impulsar el crecimiento de tu proyecto y hacer realidad
+          tus ideas.
+        </p>
         <div class="boton">
-          <Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
           <Boton text="Contactanos" link="https://github.com/Dreez-Web" />
         </div>
       </section>
-      <img src={astronauta.src} alt="Astronauta" class="astronauta" />
+      <Card
+        title="Desarrollo"
+        src="../src/assets/astronauta.png"
+        alt="Astronauta"
+      />
     </main>
   </div>
-  <Tecnologias />
 </section>
 <style>
   #background {
@@ -51,6 +58,7 @@ import Tecnologias from "../components/Tecnologias.astro";
     flex-direction: column;
     justify-content: center;
     padding: 86px;
+    width: 500px;
   }
   .boton {
     display: flex;

@@ -1,58 +1,53 @@
 ---
-const { src, alt, title, description} = Astro.props;
-import '@fontsource-variable/onest';
-
+const { src, alt, title, description } = Astro.props;
+import "@fontsource-variable/onest";
 ---
 
-
-  <div class="card">
-     
-        <div class="label">{title}</div>
-        <img class="backgroud-image" src={src} alt={alt}/>
-    
-  </div>
-
+<div class="card">
+  <div class="label">{title}</div>
+  <img class="image" src={src} alt={alt} />
+</div>
 
 <style>
-
-
   /* Estilos generales de la card */
   .card {
-    font-family: 'Onest Variable', sans-serif;
+    font-family: "Onest Variable", sans-serif;
     position: relative;
-    width: 500px; /* Ajusta según el tamaño deseado */
-    height: 300px; /* Ajusta según el tamaño deseado */
+    width: 400px; /* Ajusta según el tamaño deseado */
+    height: 200px; /* Ajusta según el tamaño deseado */
     border-radius: 16px; /* Esquinas redondeadas */
     overflow: hidden; /* Para evitar que los elementos internos sobresalgan */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Sombra */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
-    .background-image {
+  .image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen se ajuste al tamaño del contenedor */
+    object-fit: contain;
   }
-  
+
   /* Hover para añadir profundidad */
   .card:hover {
     transform: translateY(-10px);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
   }
-  
+
   /* Contenido textual */
   .card-content {
     padding: 1rem;
   }
-  
-  
+
   /* Información adicional */
   .card-info {
     font-size: 0.875rem; /* Tamaño mediano */
     color: #ccc; /* Gris claro */
     margin-bottom: 0.5rem;
   }
-  
+
   /* Título */
   .label {
     position: absolute;
@@ -66,8 +61,5 @@ import '@fontsource-variable/onest';
     font-weight: bold; /* Texto en negrita */
     color: #333; /* Color del texto */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-}
-  
-  
-  
+  }
 </style>

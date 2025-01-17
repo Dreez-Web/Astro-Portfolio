@@ -1,8 +1,8 @@
 ---
 import background from "../assets/background.svg";
-import astronauta from "../assets/astronauta.png";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
+import Card from "../components/Card.astro";
 ---
 
 <section>
@@ -10,18 +10,20 @@ import Tecnologias from "../components/Tecnologias.astro";
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
       <section id="hero">
-        <h1>Diseño <span class="dynamic-gradient">Web</span></h1>
-        <p>Diseñamos y creamos tu web.</p>
-        <p>Webs Rápidas y Eficientes con Tecnología de Punta</p>
-        <div class="boton">
-          <Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
-          <Boton text="Contactanos" link="https://github.com/Dreez-Web" />
-        </div>
+        <h1><span class="dynamic-gradient">SHOWCASE</span></h1>
+        <h2>Paginas versatiles. Explora y observa de que somos capaces</h2>
       </section>
-      <img src={astronauta.src} alt="Astronauta" class="astronauta" />
+      <id class="card-container">
+        <ul>
+          <li><Card title="Restaurant" src="../src/assets/astro.svg" /></li>
+          <li><Card title="Academia" src="../src/assets/astro.svg" /></li>
+          <li><Card title="Eventos" src="../src/assets/astro.svg" /></li>
+          <li><Card title="Hotel" src="../src/assets/astro.svg" /></li>
+          <li><Card title="Blog" src="../src/assets/astro.svg" /></li>
+        </ul>
+      </id>
     </main>
   </div>
-  <Tecnologias />
 </section>
 <style>
   #background {
@@ -41,21 +43,43 @@ import Tecnologias from "../components/Tecnologias.astro";
   main {
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   #hero {
     display: flex;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     padding: 86px;
+    width: 500px;
   }
   .boton {
     display: flex;
     justify-content: center;
     gap: 20px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 10px;
   }
   h1 {
     font-size: 4rem;
@@ -64,9 +88,10 @@ import Tecnologias from "../components/Tecnologias.astro";
 
   h2 {
     margin: 0 0 1em;
-    font-weight: normal;
+    font-weight: bold;
     color: #111827;
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
   }
   span {
     color: #f03cae;
