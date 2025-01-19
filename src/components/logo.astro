@@ -1,5 +1,5 @@
 <a href="/" class="link">
-  <span class="dark:text-white" class="span">✦</span>
+  <span class="dark:text-white" id="span">✦</span>
   <!-- Logo Text -->
   <span class="dark:text-white" class="span-text">Astronaut</span>
 </a>
@@ -17,12 +17,12 @@
     color: #333;
   }
 
-  .span {
+  #span {
     font-size: 1.25rem;
     transition: transform 200ms ease-in-out; /* ease-in-out + duration-300 */
   }
 
-  .link:hover .span {
+  .link:hover #span {
     transform: rotate(-12deg) scale(1.2);
   }
 

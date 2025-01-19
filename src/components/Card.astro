@@ -1,11 +1,14 @@
 ---
-const { src, alt, title, description } = Astro.props;
+import Boton from "../components/boton.astro";
+const { src, alt, title, description, href } = Astro.props;
 import "@fontsource-variable/onest";
 ---
 
 <div class="card">
   <div class="label">{title}</div>
-  <img class="image" src={src} alt={alt} />
+  <a href={href} target="_blank">
+    <img class="image" src={src} alt={alt} />
+  </a>
 </div>
 
 <style>
