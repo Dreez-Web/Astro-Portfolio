@@ -2,16 +2,18 @@
 import background from "../assets/background.svg";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
-import Astropizza from "../assets/astronautapizza.png";
+import Astropizza from "../assets/astronautapizza.webp";
 ---
 
 <section>
-  <div id="container">
+  <div class="dark:bg-slate-700" id="container">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
       <section id="hero">
-        <h1>Lo que hacemos por <span class="dynamic-gradient">ti</span></h1>
-        <p>
+        <h1 class="dark:text-white">
+          Lo que hacemos por <span class="dynamic-gradient">TI</span>.
+        </h1>
+        <p class="dark:text-white">
           Enfocados en ofrecer soluciones innovadoras, nuestros servicios están
           diseñados para ayudarte a alcanzar tus <span>objetivos</span>. Desde
           estrategias personalizadas hasta herramientas de última generación,
@@ -38,8 +40,9 @@ import Astropizza from "../assets/astronautapizza.png";
   }
 
   img {
-    width: 400px;
+    width: 500px;
   }
+
   #container {
     height: 100%;
   }
@@ -57,7 +60,7 @@ import Astropizza from "../assets/astronautapizza.png";
     flex-direction: column;
     justify-content: center;
     padding: 86px;
-    width: 500px;
+    width: 600px;
   }
   .boton {
     display: flex;
@@ -68,6 +71,7 @@ import Astropizza from "../assets/astronautapizza.png";
     font-size: 4rem;
     font-weight: bold;
     margin: 0.25em 0 0.2em;
+    line-height: 1;
   }
 
   h2 {
@@ -88,11 +92,6 @@ import Astropizza from "../assets/astronautapizza.png";
     margin: 0.25em 0; /* Reduce margen superior e inferior */
   }
 
-  .astronauta {
-    width: 600px; /* Ajusta según el tamaño deseado */
-    animation: float 5s ease-in-out infinite;
-  }
-
   @keyframes float {
     0% {
       transform: translateY(0);
@@ -106,7 +105,7 @@ import Astropizza from "../assets/astronautapizza.png";
   }
 
   .dynamic-gradient {
-    background: linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80, #ff6ec4);
+    background: linear-gradient(90deg, #ff6ec4, #413bf3, #179c48, #ff6ec4);
     background-size: 300%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

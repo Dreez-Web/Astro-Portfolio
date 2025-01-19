@@ -1,18 +1,22 @@
 ---
 import background from "../assets/background.svg";
-import astronauta from "../assets/astronauta.png";
+import astronauta from "../assets/astronauta.webp";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
 ---
 
-<section>
+<section class="dark:bg-slate-700">
   <div id="container">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
       <section id="hero">
-        <h1>Diseño <span class="dynamic-gradient">Web</span></h1>
-        <p>Diseñamos y creamos tu web.</p>
-        <p>Rápidas y Eficientes con Tecnología de Punta</p>
+        <h1 class="dark:text-white">
+          Diseño <span class="dynamic-gradient">Web</span>
+        </h1>
+        <p class="dark:text-white">
+          Diseñamos y creamos tu web.<br />Rápidas y Eficientes con Tecnología
+          de Punta
+        </p>
         <div class="boton">
           <Boton text="Sigueme en GitHub" link="https://github.com/Dreez-Web" />
           <Boton text="Contactanos" link="https://github.com/Dreez-Web" />
@@ -60,12 +64,10 @@ import Tecnologias from "../components/Tecnologias.astro";
   h1 {
     font-size: 4rem;
     font-weight: 600;
-    margin: 0.25em 0 0.2em;
   }
 
   h2 {
-    margin: 0 0 1em;
-    font-weight: normal;
+    font-weight: 500;
     color: #111827;
     font-size: 20px;
   }

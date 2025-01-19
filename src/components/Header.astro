@@ -1,22 +1,24 @@
 ---
 import menus from "../collections/menu.json";
 import Logo from "../components/Logo.astro";
+import Toggle from "../components/ThemeToggle.astro";
 ---
 
 <header>
-  <div>
+  <div class="dark:bg-slate-600">
     <Logo />
     <nav>
       <ul class="menu">
         {
           menus.map((menu) => (
-            <li>
-              <a href={menu.url} class="menu-link">
+            <li class="dark:text-white">
+              <a class="dark:text-white" href={menu.url} class="menu-link">
                 {menu.name}
               </a>
             </li>
           ))
         }
+        <Toggle />
       </ul>
     </nav>
   </div>
@@ -33,7 +35,7 @@ import Logo from "../components/Logo.astro";
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: rgb(248, 249, 250);
     padding: 0.2rem 1rem;
     gap: 1rem;
   }

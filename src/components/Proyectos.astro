@@ -6,14 +6,17 @@ import Card from "../components/Card.astro";
 ---
 
 <section>
-  <div id="container">
+  <div class="dark:bg-slate-700" id="container">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
       <section id="hero">
-        <h1><span class="dynamic-gradient">SHOWCASE</span></h1>
-        <h2>
+        <h1>
+          <span class="dynamic-gradient">SHOWCASE</span>
+        </h1>
+        <h2 class="dark:text-white">
           Paginas <span>versatiles</span>. Explora y observa de que somos <span
-            >capaces</span>
+            >capaces</span
+          >
         </h2>
       </section>
       <id class="card-container">
