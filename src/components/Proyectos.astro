@@ -3,9 +3,11 @@ import background from "../assets/background.svg";
 import Boton from "../components/boton.astro";
 import Tecnologias from "../components/Tecnologias.astro";
 import Card from "../components/Card.astro";
+import Rest from "../assets/resto.webp";
+import Academia from "../assets/Academia.webp";
 ---
 
-<section class="pb-8">
+<section class="pb-4">
   <div class="dark:bg-slate-950" id="container">
     <img id="background" src={background.src} alt="" fetchpriority="high" />
     <main>
@@ -15,7 +17,7 @@ import Card from "../components/Card.astro";
         </h1>
         <h2 class="dark:text-white">
           Paginas <span>versatiles</span>. Explora y observa de que somos <span
-            >capaces</span
+            >capaces.</span
           >
         </h2>
       </section>
@@ -24,15 +26,15 @@ import Card from "../components/Card.astro";
           <li>
             <Card
               title="Restaurant"
-              src="../src/assets/astro.svg"
-              href="https://dounut-astro.vercel.app/"
+              src={Rest.src}
+              href="https://astropie.netlify.app/"
             />
           </li>
           <li>
             <Card
               title="Academia"
-              src="../src/assets/astro.svg"
-              href="https://astro-ink.vercel.app/"
+              src={Academia.src}
+              href="https://astroship-pro.web3templates.com/"
             />
           </li>
           <li>
@@ -77,7 +79,7 @@ import Card from "../components/Card.astro";
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 86px;
+    padding: 20px;
     width: 500px;
   }
   .boton {
@@ -90,6 +92,7 @@ import Card from "../components/Card.astro";
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 1000px;
     gap: 20px;
   }
 
