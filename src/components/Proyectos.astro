@@ -5,6 +5,9 @@ import Tecnologias from "../components/Tecnologias.astro";
 import Card from "../components/Card.astro";
 import Rest from "../assets/resto.webp";
 import Academia from "../assets/Academia.webp";
+import Tienda from "../assets/Tienda.webp";
+import Blog from "../assets/blog.webp";
+import Gym from "../assets/gym.webp";
 ---
 
 <section class="pb-4 pt-6" id="proyectos">
@@ -39,13 +42,25 @@ import Academia from "../assets/Academia.webp";
           </li>
           <li>
             <Card
-              title="Eventos"
-              src="../src/assets/astro.svg"
-              href="https://getastropod.netlify.app/"
+              title="Tienda"
+              src={Tienda.src}
+              href="https://screwfast.uk/"
             />
           </li>
-          <li><Card title="Hotel" src="../src/assets/astro.svg" /></li>
-          <li><Card title="Blog" src="../src/assets/astro.svg" /></li>
+          <li>
+            <Card
+              title="Blog"
+              src={Blog.src}
+              href="https://dante-astro-theme.netlify.app/"
+            />
+          </li>
+          <li>
+            <Card
+              title="Gym"
+              src={Gym.src}
+              href="https://fitness-astro-template.netlify.app/"
+            />
+          </li>
         </ul>
       </id>
     </main>
