@@ -26,10 +26,7 @@ import Astropizza from "../assets/astronautapizza.webp";
           actualizar y optimizar tu pagina web para que se vea moderna y atractiva.
         </p>
         <div class="boton">
-          <Boton
-            text="Sobre mi"
-            link="https://dreez-web.github.io/Personal-Web/"
-          />
+          <Boton text="Contactanos" link="#contacto" />
         </div>
       </section>
       <img src={Astropizza.src} alt="Astropizza" />
@@ -126,6 +123,25 @@ import Astropizza from "../assets/astronautapizza.webp";
     }
     100% {
       background-position: 100% 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      padding: 2rem;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
+    img {
+      display: none;
     }
   }
 </style>

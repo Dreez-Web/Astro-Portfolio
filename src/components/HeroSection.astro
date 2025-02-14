@@ -19,8 +19,8 @@ import Tecnologias from "../components/Tecnologias.astro";
         </p>
         <div class="boton">
           <Boton
-            text="Sigueme en GitHub"
-            link="https://github.com/Dreez-Web"
+            text="Conoceme"
+            link="https://dreez-web.github.io/Personal-Web/"
             bgColor="#FFFFFF"
             textColor="#000000"
             borderColor="#FFFFFF"
@@ -123,6 +123,25 @@ import Tecnologias from "../components/Tecnologias.astro";
     }
     100% {
       background-position: 100% 50%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #hero {
+      padding: 2rem;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .astronauta {
+      width: 300px;
     }
   }
 </style>
