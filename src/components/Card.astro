@@ -4,6 +4,7 @@ const { src, alt, title, description, href } = Astro.props;
 import "@fontsource-variable/onest";
 ---
 
+<<<<<<< Updated upstream
 <div class="card">
   <div class="label">{title}</div>
   <a href={href} target="_blank">
@@ -13,6 +14,17 @@ import "@fontsource-variable/onest";
 
 <style>
   /* Estilos generales de la card */
+=======
+
+  <div class="card">     
+        <div class="label"><h2>{title}</h2><p>{description}</p></div>
+        <img class="backgroud-image" src={src} alt={alt}/>   
+  </div>
+
+
+<style>
+/* Estilos generales de la card */
+>>>>>>> Stashed changes
   .card {
     font-family: "Onest Variable", sans-serif;
     position: relative;
@@ -38,12 +50,16 @@ import "@fontsource-variable/onest";
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
     cursor: pointer;
   }
+<<<<<<< Updated upstream
 
   /* Contenido textual */
   .card-content {
     padding: 1rem;
   }
 
+=======
+  
+>>>>>>> Stashed changes
   /* Información adicional */
   .card-info {
     font-size: 0.875rem; /* Tamaño mediano */
