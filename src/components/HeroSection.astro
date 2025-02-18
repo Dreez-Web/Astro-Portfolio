@@ -56,6 +56,7 @@ import Tecnologias from "../components/Tecnologias.astro";
     justify-content: center;
     align-items: center;
     margin: 40px 100px;
+    
   }
 
   #hero {
@@ -64,6 +65,7 @@ import Tecnologias from "../components/Tecnologias.astro";
     flex-direction: column;
     justify-content: center;
     padding: 86px;
+    gap: 2rem;
   }
   .boton {
     display: flex;
@@ -71,8 +73,10 @@ import Tecnologias from "../components/Tecnologias.astro";
     gap: 20px;
   }
   h1 {
-    font-size: 4rem;
+    padding-top: 2rem;
+    font-size: 5rem;
     font-weight: 600;
+    line-height: 1;
   }
 
   h2 {
@@ -83,10 +87,11 @@ import Tecnologias from "../components/Tecnologias.astro";
   span {
     color: #f03cae;
     font-weight: bold;
+  
   }
   p {
     color: #4b5563;
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 1.5; /* Mejora la legibilidad */
     letter-spacing: -0.006em;
     margin: 0.25em 0; /* Reduce margen superior e inferior */
@@ -141,18 +146,21 @@ import Tecnologias from "../components/Tecnologias.astro";
     #hero {
       padding: 2rem;
       width: 100%;
+      align-items: center;
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 5rem;
+      text-align: center;
     }
 
     p {
       font-size: 1.5rem;
+      text-align: center;
     }
 
     .astronauta {
-      width: 300px;
+      display: none;
     }
   }
 </style>
