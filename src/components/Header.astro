@@ -7,10 +7,37 @@ import Toggle from "../components/ThemeToggle.astro";
 <header>
   <div class="dark:bg-slate-600">
     <Logo />
-    <button class="abrir-menu" id="abrir"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg></button>
+    <button class="abrir-menu" id="abrir"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 6l16 0"></path><path d="M4 12l16 0"></path><path d="M4 18l16 0"
+        ></path></svg
+      ></button
+    >
     <nav class="nav" id="nav">
-      <button class="cerrar-menu" id="cerrar"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-xbox-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10m3.6 5.2a1 1 0 0 0 -1.4 .2l-2.2 2.933l-2.2 -2.933a1 1 0 1 0 -1.6 1.2l2.55 3.4l-2.55 3.4a1 1 0 1 0 1.6 1.2l2.2 -2.933l2.2 2.933a1 1 0 0 0 1.6 -1.2l-2.55 -3.4l2.55 -3.4a1 1 0 0 0 -.2 -1.4" /></svg></button>
+      <button class="cerrar-menu" id="cerrar"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="icon icon-tabler icons-tabler-filled icon-tabler-xbox-x"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M12 2c5.523 0 10 4.477 10 10s-4.477 10 -10 10s-10 -4.477 -10 -10s4.477 -10 10 -10m3.6 5.2a1 1 0 0 0 -1.4 .2l-2.2 2.933l-2.2 -2.933a1 1 0 1 0 -1.6 1.2l2.55 3.4l-2.55 3.4a1 1 0 1 0 1.6 1.2l2.2 -2.933l2.2 2.933a1 1 0 0 0 1.6 -1.2l-2.55 -3.4l2.55 -3.4a1 1 0 0 0 -.2 -1.4"
+          ></path></svg
+        ></button
+      >
       <ul class="menu">
         {
           menus.map((menu) => (
@@ -25,6 +52,7 @@ import Toggle from "../components/ThemeToggle.astro";
     </nav>
   </div>
 </header>
+
 <style>
   header {
     position: fixed;
@@ -65,17 +93,17 @@ import Toggle from "../components/ThemeToggle.astro";
   }
 
   .abrir-menu,
-  .cerrar-menu{
+  .cerrar-menu {
     display: none;
   }
 
   @media screen and (max-width: 768px) {
-   .abrir-menu,
-   .cerrar-menu{
+    .abrir-menu,
+    .cerrar-menu {
       display: block;
       cursor: pointer;
     }
-    .nav{
+    .nav {
       opacity: 0;
       visibility: hidden;
 
@@ -83,38 +111,35 @@ import Toggle from "../components/ThemeToggle.astro";
       flex-direction: column;
       position: absolute;
       align-items: end;
-      gap: 1rem ;
+      gap: 1rem;
       top: 0;
       right: 0;
       padding: 2rem;
       background-color: rgb(213, 143, 235);
-      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+      box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
       border-radius: 0px 0 0 25px;
     }
-    .nav.visible{
+    .nav.visible {
       opacity: 1;
-      visibility: visible
+      visibility: visible;
     }
-    ul{
+    ul {
       flex-direction: column;
       align-items: end;
-      
     }
-
   }
 </style>
 
 <script>
-const nav = document.querySelector("#nav");
-const abrir = document.querySelector("#abrir");
-const cerrar = document.querySelector("#cerrar");
+  const nav = document.querySelector("#nav");
+  const abrir = document.querySelector("#abrir");
+  const cerrar = document.querySelector("#cerrar");
 
-abrir?.addEventListener("click", () => {
-  nav?.classList.add("visible");
-})
+  abrir?.addEventListener("click", () => {
+    nav?.classList.add("visible");
+  });
 
-cerrar?.addEventListener("click", () =>{
-  nav?.classList.remove("visible");
-})
-
+  cerrar?.addEventListener("click", () => {
+    nav?.classList.remove("visible");
+  });
 </script>
